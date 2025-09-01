@@ -36,6 +36,25 @@ int main() {
     cout<<A[1]<<endl;
     printf("%d\n", A[2]);
 
+    /*  Variable-length Arrays  */ 
+    /*
+    int n;
+    cout << "Enter size";
+    cin>>n; // Takes input from User
+
+      (a) int A[n] = {2, 4, 6, 8, 10, 12};
+          - Invalid in standard C++ as C++ does not support variable-length arrays (VLAs) as part of the standard.
+          - The size of an array must be a compile-time constant. This may compile with compiler extensions (e.g., GCC), but it is non-standard.
+    
+      (b) int A[n]; 
+          A[0] = 2; 
+
+         - This is also invalid in standard C++ (same reason as above). VLAs are not part of the C++ standard (unlike C99 where they are allowed).
+         - May work with some compilers as a non-standard extension. If this does compile, an array of size n would be declared. 
+           Only index 0 would be explicitly initialized, while the other elements would contain garbage values.
+
+    */
+
     return 0;
 
     // Extra notes
@@ -43,5 +62,6 @@ int main() {
     (1) int is typically 4 bytes; A[5] usually takes 20 bytes
     (2) To use C-style functions like printf(), include <stdio.h>.
     (3) The 'endl' keyword adds a newline and also flushes the output buffer.
+    (4) cin>>n ->  takes input from User
     */
 }
